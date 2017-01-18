@@ -157,7 +157,10 @@ namespace Tetris
                   Point Position = currTetramino.getCurrPosition();
                   Point[] Shape = currTetramino.getCurrShape();
                     bool move = true;
-                    foreach (Point S in Shape)
+
+            currTetraminoErase();
+
+            foreach (Point S in Shape)
                     {
                         if (((int)(S.X + Position.X) + ((Cols / 2) - 1) + 1) >= Cols)
                         {
